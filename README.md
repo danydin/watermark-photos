@@ -1,5 +1,5 @@
 # Watermarking Tool in Python
-A simple watermarking tool that adds a text on the bottom left corner of images.
+A simple watermarking tool that adds a text on the bottom right corner of an image.
 
 ## Step 1: Ensure Python is Installed
 Before creating a virtual environment, you need Python installed on your system. Most modern operating systems have Python installed by default. To check if Python is installed, open a terminal or command prompt and type:
