@@ -52,7 +52,7 @@ def add_text_watermark_to_folder(
 
 
 # Example usage
-# example dir: /Users/pdichone/Code/vincibits/automation/watermaring-tool/output_dir
+# example dir: /Users/mycomputername/Code/vincibits/automation/watermaring-tool/output_dir
 input_directory = "./input_dir"  # Replace with your input directory
 output_directory = "./output_dir"  # Replace with your output directory
 watermark = "@vincibits"  # Replace with your watermark text
