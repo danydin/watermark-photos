@@ -1,4 +1,4 @@
-# Watermarking Took in Python
+# Watermarking Tool in Python
 A simple watermarking tool that adds a text on the bottom left corner of images.
 
 ## Step 1: Ensure Python is Installed
