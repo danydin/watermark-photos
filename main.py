@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 def add_text_watermark_to_folder(
-    input_dir, output_dir, watermark_text, position, font_size=30
+    input_dir, output_dir, watermark_text, font_size=30
 ):
     # Create output directory if it doesn't exist
     if not os.path.exists(output_dir):
@@ -14,6 +14,7 @@ def add_text_watermark_to_folder(
             image_path = os.path.join(input_dir, filename)
             original = Image.open(image_path)
             width, height = original.size
+            # print(f"width: {width} -- height: {height}")
 
             # Create ImageDraw object
             draw = ImageDraw.Draw(original)
@@ -27,13 +28,14 @@ def add_text_watermark_to_folder(
             # Specify font
             font = ImageFont.truetype("super_nought.ttf", size=font_size)
 
-            # get text dimensions
+            # The mask represents the shape of the text characters as a binary image. and reterive the x and y of the watermark text
             text_width = font.getmask(watermark_text).getbbox()[2]
             text_height = font.getmask(watermark_text).getbbox()[3]
-            print(f"text width {text_width}, {text_height}")
+            # print(f"text width {text_width}, {text_height}")
 
-            margin = 100
-            # Get the coords to place the watermark in the bottom right corner
+            # create space around the watermark
+            margin = 0
+            # coords to place the watermark in the bottom right corner
             a = width - text_width - margin
             b = height - text_height - margin
 
@@ -53,8 +55,7 @@ def add_text_watermark_to_folder(
 input_directory = "./input_dir"  # Replace with your input directory
 output_directory = "./output_dir"  # Replace with your output directory
 watermark = "github.com/danydin"  # Replace with your watermark text
-position = (50, 50)  # Replace with your desired position
 
 add_text_watermark_to_folder(
-    input_directory, output_directory, watermark, position, font_size=199
+    input_directory, output_directory, watermark, font_size=199
 )
