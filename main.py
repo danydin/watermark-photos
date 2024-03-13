@@ -39,9 +39,6 @@ def add_text_watermark_to_folder(
 
             # print(f"text width {a}, {b}")
 
-            # Positioning the watermark
-            x, y = position
-
             # Apply the watermark
             draw.text((a, b), watermark_text, fill="white", font=font)
 
@@ -55,7 +52,7 @@ def add_text_watermark_to_folder(
 # example dir: /Users/mycomputername/Code/vincibits/automation/watermaring-tool/output_dir
 input_directory = "./input_dir"  # Replace with your input directory
 output_directory = "./output_dir"  # Replace with your output directory
-watermark = "@vincibits"  # Replace with your watermark text
+watermark = "github.com/danydin"  # Replace with your watermark text
 position = (50, 50)  # Replace with your desired position
 
 add_text_watermark_to_folder(
